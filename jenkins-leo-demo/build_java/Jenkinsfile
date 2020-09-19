@@ -5,8 +5,8 @@ pipeline {
  
             stage ('test') {
                 steps {
-                  dir("jenkins-leo-demo/build_java"){
-                        echo "mvn clean compile test"
+                  dir("build_java"){
+                        sh "mvn clean compile test"
                   }
                    
                    
@@ -15,7 +15,7 @@ pipeline {
 
             stage ('Build application') {
                 steps {
-                    dir("jenkins-leo-demo/build_java"){
+                    dir("build_java"){
 
                         sh "mvn -f pom.xml clean install -Dmaven.test.skip=true"
                         sh "tree"
