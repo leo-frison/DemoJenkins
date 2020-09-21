@@ -12,22 +12,5 @@ pipeline {
                    
                 }
             }
-
-    //        stage ('Build application') {
-    //            steps {
-    //                dir("build_java"){
-//
-//                        sh "mvn -f pom.xml clean install -Dmaven.test.skip=true"
-//                        sh "tree"
-//                    }   
-//                }
-//            }
-  
-//            stage ('Create docker image') {
-//                steps {
-//                 echo "creando docker"
-//                }
-
-            }
         }
 }
